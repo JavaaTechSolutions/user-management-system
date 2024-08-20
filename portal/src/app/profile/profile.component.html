@@ -1,0 +1,9 @@
+<div class="container">
+
+    <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
+    <h2>Profile Information</h2>
+    <p>Name: {{profileInfo?.user?.name}}</p>
+    <p>Email: {{profileInfo?.user?.email}}</p>
+    <p>City: {{profileInfo?.user?.city}}</p>
+    <button *ngIf ="profileInfo?.ourUsers?.role === 'ADMIN'"  (click)="updateProfile(profileInfo?.user?.id)">Update Profile</button>
+</div>
